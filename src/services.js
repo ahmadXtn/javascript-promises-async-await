@@ -18,13 +18,13 @@ export function fetchBooks(){
 		.catch(error=>console.log(error))
 }
 
-export  async function asyncFetchBooks(){
+export  async function asyncFetchMovies(){
 	try{
-		const response=await fetch('/data/movies.json');
+		const response=await fetch('./data/movies.json');
 		const results=await response.json();
 		return results;
 	}
-	catch (e) {
-		console.log(e)
+	catch (error) {
+		console.log(error)
 	}
 }
