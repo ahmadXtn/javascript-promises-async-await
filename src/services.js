@@ -17,3 +17,14 @@ export function fetchBooks(){
 		.then(books=>books)
 		.catch(error=>console.log(error))
 }
+
+export  async function asyncFetchBooks(){
+	try{
+		const response=await fetch('/data/movies.json');
+		const results=await response.json();
+		return results;
+	}
+	catch (e) {
+		console.log(e)
+	}
+}
